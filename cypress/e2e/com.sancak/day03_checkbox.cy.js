@@ -13,6 +13,13 @@ describe('Checkbox', () => {
         // Checkbox Test be.checked - Checkbox'ın seçilmediğini kontrol eder.
         cy.get('#layered_category_4').should('be.checked')
 
+        cy.wait(3000)
+        // Uncheck 
+        cy.get('#layered_category_4').uncheck()
+        
+        cy.get('#layered_category_4').should('not.be.checked')
+
+
 
     })
 })
