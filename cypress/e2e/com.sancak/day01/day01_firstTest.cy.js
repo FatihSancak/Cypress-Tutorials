@@ -3,7 +3,7 @@
 describe('My First Test', () => {
 // describe('Case İsmi', case için oluşturulacak fonksyionlar () => {})
 
-    it('URL testi', () => {
+    it('Case 1 : URL testi', () => {
         // testi tanımlıyoruz @Test gibi düşünülebilir.
         // it('testin ismi',test  için oluşturulacak fonksyionlar () => {})
 

@@ -1,4 +1,4 @@
-describe('Cyrstal Key Hotel',() => {
+describe('Case 2 : Koala Resort Hotels',() => {
 
     // siteye git
     // login'e tıkla 
