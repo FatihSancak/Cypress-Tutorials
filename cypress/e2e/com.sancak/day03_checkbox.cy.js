@@ -20,14 +20,23 @@ describe('Checkbox', () => {
         cy.get('#layered_category_4').should('not.be.checked')
     })
 
-    it.only('Checking All Checkboxes',() => {
+    // Çalışacak olan testin sadece bu test olmasını istiyorsanız it.only şeklinde set edin.
+    it('Check All Checkboxes', () => {
 
         cy.visit('http://automationpractice.pl/')
         cy.get('.sf-menu > :nth-child(1)').click()
         // Tüm input türü CHECKBOX olanların hepsini CHECK eder.
         cy.get("input[type=checkbox").check()
-        cy.wait(2*1000)
+        cy.wait(2 * 1000)
+        // Tüm input türü CHECKBOX olanların hepsini UNCHECK eder.
         cy.get("input[type=checkbox").uncheck()
 
+    })
+
+    it.only('CheckBox Click',() => {
+        cy.visit('http://automationpractice.pl/')
+        cy.get('.sf-menu > :nth-child(1)').click()
+        cy.get("input[type=checkbox").click({ multiple: true })
+        cy.get("input[type=checkbox").should('be.checked')
     })
 })
