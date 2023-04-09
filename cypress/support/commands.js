@@ -9,7 +9,10 @@
 import 'cypress-file-upload';
 
 // ***********************************************
-
+{
+        projectId: "w86wqm"
+        // The rest of the Cypress config options go here...
+      }
 
 // Herhangi bir siteye giriş için kullanılabilecek LOGIN komutu
 Cypress.Commands.add('login', (site, email, password) => {
