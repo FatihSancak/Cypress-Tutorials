@@ -1,4 +1,4 @@
-describe('Scroll TEsti',()=>{
+describe('Scroll Testi',()=>{
     it('Scrool into view',()=>{
 
         cy.visit('https://qa-environment.koalaresorthotels.com/')

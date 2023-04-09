@@ -1,3 +1,4 @@
+
 describe('Checkbox', () => {
     it('Checking Single Box', () => {
 
@@ -33,10 +34,23 @@ describe('Checkbox', () => {
 
     })
 
-    it.only('CheckBox Click',() => {
+    it.only('CheckBox Click', () => {
         cy.visit('http://automationpractice.pl/')
         cy.get('.sf-menu > :nth-child(1)').click()
         cy.get("input[type=checkbox").click({ multiple: true })
-        cy.get("input[type=checkbox").should('be.checked')
+
+        // ASSERT (Yapılan Testin Doğruluğunun Kontrolü)
+
+        // 1
+        cy.get("input[type=checkbox").first().should('be.checked')
+
+        // 2 
+        cy.get("input[type=checkbox").first().parent().should('have.class',"checked")
+
+        // 3 should('have.id','username')
+        // 4 should('have.type','text'")
+        // should('have.class','container')
+
     })
+
 })
