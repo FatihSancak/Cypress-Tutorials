@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-04-10T10:19:58.436Z",
+    "end": "2023-04-10T10:20:05.843Z",
+    "duration": 7407,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "99f397fc-535d-46ea-b533-5f53e2f86ee2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\com.sancak\\day02\\day02_crystal_kay.cy.js",
+      "file": "cypress\\e2e\\com.sancak\\day02\\day02_crystal_kay.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2e6d6f61-c78e-41d9-be6d-4e9d07451371",
+          "title": "Case 3 : Koala Resort Hotels",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test 02",
+              "fullTitle": "Case 3 : Koala Resort Hotels Test 02",
+              "timedOut": null,
+              "duration": 5194,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://qa-environment.koalaresorthotels.com/');\ncy.contains('Log in').click();\n// ASSERT \n// İşlemin doğruluğunu kontrol etmek için yapılabilecekler: INCLUDE\n// 1. Yöntem\n// URL içinde 'Account/Logon' var mı?\ncy.url().should('include', 'Account/Logon');\n// 2. Yöntem\n// Hedef sayfanın içinde Locater'i tespit edilmiş olan yazı var mı?  .SHOULD('HAVE.TEXT')\ncy.get('#navLogon > .nav-link').should('have.text', 'Log in');\n// 3.Yöntem\n// Hedef sayfasındaki 'Log in' e ait locater var mı görünür mü? .SHOULD('BE.VISIBLE')\ncy.get('.row > .mb-4').should('be.visible');\n// 4.Yöntem \n// Hedef sayfanın title kısmında hedef title'ı içeriyor mu ? .SHOULD('EQ','TITLE')\ncy.title().should('eq', 'KoalaResortHotels - Log in');\n// 5. Yöntem \n// Locate edilen yerde 'Log in' içeriyor mu ? .CONTAINS('')\ncy.get('.row > .mb-4').contains('Log in');",
+              "err": {},
+              "uuid": "2d2802c9-cd76-47ae-90c4-a58f4095e441",
+              "parentUUID": "2e6d6f61-c78e-41d9-be6d-4e9d07451371",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2d2802c9-cd76-47ae-90c4-a58f4095e441"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5194,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

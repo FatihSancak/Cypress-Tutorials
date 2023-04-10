@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-04-10T10:21:23.535Z",
+    "end": "2023-04-10T10:21:29.797Z",
+    "duration": 6262,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ea3662d7-c496-48d9-a077-8f779388fc89",
+      "title": "",
+      "fullFile": "cypress\\e2e\\com.sancak\\day04\\day04_drad_and_drop.cy.js",
+      "file": "cypress\\e2e\\com.sancak\\day04\\day04_drad_and_drop.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e34a92b0-8432-4eb4-9b8b-f27dd48ea1b7",
+          "title": "Drag Drop Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test",
+              "fullTitle": "Drag Drop Test Test",
+              "timedOut": null,
+              "duration": 4454,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(site);\ncy\n// Sürüklenecek (drag) elementi .get ile alınması\n.get('#column-a')\n// Sürüklenen elementin bırakılacağı (drop) elemetin adı\n.drag('#column-b');\n// Öncelikle cy.get() ile sürüklenecek element alınır ve .drag() komutu ile bırakılır.\n// Çift Tıklama\ncy.get('#column-a').dblclick();\ncy.wait(2 * 1000);\n// Sağ Tıklama\ncy.get('#column-a').rightclick();",
+              "err": {},
+              "uuid": "7fbb4113-4191-469d-92ab-df48735d0789",
+              "parentUUID": "e34a92b0-8432-4eb4-9b8b-f27dd48ea1b7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7fbb4113-4191-469d-92ab-df48735d0789"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4454,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

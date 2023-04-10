@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-04-10T10:19:22.865Z",
+    "end": "2023-04-10T10:19:32.066Z",
+    "duration": 9201,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "37803d77-be8b-4ed8-be6e-74c7c356897a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\com.sancak\\automationStepByStep\\tutorial_07.cy.js",
+      "file": "cypress\\e2e\\com.sancak\\automationStepByStep\\tutorial_07.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a303e17b-6420-4fa0-80f1-09fb8f7a9569",
+          "title": "Login Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "New User Add",
+              "fullTitle": "Login Test New User Add",
+              "timedOut": null,
+              "duration": 6253,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://opensource-demo.orangehrmlive.com/');\ncy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type('Admin');\ncy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type('admin123');\n// Login Button Click\ncy.get('.oxd-button').click();\n// Admin Menu \ncy.get(':nth-child(1) > .oxd-main-menu-item').click();\n// Add Button Click\ncy.get('.orangehrm-header-container > .oxd-button').click();\n// Save Button Click\ncy.get('.oxd-button--secondary').click();",
+              "err": {},
+              "uuid": "b44dc2b2-45c1-458f-9913-8ad7caa0a5e4",
+              "parentUUID": "a303e17b-6420-4fa0-80f1-09fb8f7a9569",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b44dc2b2-45c1-458f-9913-8ad7caa0a5e4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6253,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

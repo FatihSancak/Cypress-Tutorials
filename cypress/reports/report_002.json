@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-04-10T10:19:20.149Z",
+    "end": "2023-04-10T10:19:20.860Z",
+    "duration": 711,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "26f9ef82-85d1-491d-a42d-99715d0928b7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\com.sancak\\automationStepByStep\\1.cy.js",
+      "file": "cypress\\e2e\\com.sancak\\automationStepByStep\\1.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "341864ff-de24-4242-ad86-73a32331e905",
+          "title": "Testing protected routes",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "test1",
+              "fullTitle": "Testing protected routes test1",
+              "timedOut": null,
+              "duration": 680,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request(\"http://automationpractice.pl/index.php?controller=authentication&back=my-account\", {\n  email: \"koseters@gmail.com\",\n  password: \"qwerty1234\"\n}).then(r => {\n  window.localStorage.setItem(\"token\", r.body.token);\n});",
+              "err": {},
+              "uuid": "9dda784d-a5a1-44a1-800c-84628c700aea",
+              "parentUUID": "341864ff-de24-4242-ad86-73a32331e905",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9dda784d-a5a1-44a1-800c-84628c700aea"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 680,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

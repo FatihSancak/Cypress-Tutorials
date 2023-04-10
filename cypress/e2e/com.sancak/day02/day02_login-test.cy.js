@@ -21,8 +21,8 @@ describe('Case 6 :  Değişkenlerini dışardan alan Login', () => {
         cy.get('#user_password').type(pass)
         cy.get('.btn').click()
 
-        cy.get('#logout_link').should('have.text', 'Log out')
-        cy.url().should('have.text', 'http://zero.webappsecurity.com/bank/account-summary.html')
+        cy.get('#logout_link').should('have.text', 'Logout')
+        cy.url().should('include', 'account-summary.html')
     
     })
 })

@@ -6,13 +6,11 @@
 
 // Dosya Upload için kullanılacak dependencies
 // from : https://www.npmjs.com/package/cypress-file-upload
+
 import 'cypress-file-upload';
 
 // ***********************************************
-{
-        projectId: "w86wqm"
-        // The rest of the Cypress config options go here...
-      }
+
 
 // Herhangi bir siteye giriş için kullanılabilecek LOGIN komutu
 Cypress.Commands.add('login', (site, email, password) => {
@@ -21,7 +19,6 @@ Cypress.Commands.add('login', (site, email, password) => {
         cy.get('#email').type(email)
         cy.get('#passwd').type(password)
         cy.get('#SubmitLogin').click()
-
 })
 // ***********************************************
 
@@ -32,3 +29,15 @@ Cypress.Commands.add('searchInAmazon', (prooductName) => {
         cy.get('#nav-search-submit-button').click()
 
 })
+
+// ***********************************************
+
+// automationpractice.com -> Site kullanımda değil.
+
+// Cypress.Commands.add('login', (email, password) => {
+//         cy.visit("http://automationpractice.com/index.php")
+//         cy.get('.login').click()
+//         cy.get('#email').type(email)
+//         cy.get('#paswd').type(password)
+//         cy.get('#SubmitLogin > span').click()
+// })

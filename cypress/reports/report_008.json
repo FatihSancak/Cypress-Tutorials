@@ -1,0 +1,127 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 1,
+    "failures": -1,
+    "start": "2023-04-10T10:20:15.221Z",
+    "end": "2023-04-10T10:20:22.454Z",
+    "duration": 7233,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0726f7e2-70fe-46ac-995a-d9a11b5c8f3c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\com.sancak\\day02\\day02_login-test.cy.js",
+      "file": "cypress\\e2e\\com.sancak\\day02\\day02_login-test.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "da7bd398-8c7d-41e5-ab03-99a0cb99042a",
+          "title": "Case 6 :  Değişkenlerini dışardan alan Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Failed Login ",
+              "fullTitle": "Case 6 :  Değişkenlerini dışardan alan Login Failed Login ",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.visit('http://zero.webappsecurity.com/login.html');\ncy.get('#user_login').type(eMail);\ncy.get('#user_password').type(pass);\ncy.get('.btn').click();\n// ALERT fail beklenen durumlarda kullanabiliriz.\ncy.get(\".alert\").should('include.text', 'Login and/or password are wrong.');",
+              "err": {},
+              "uuid": "5600b7fb-7b8d-4d46-881b-9212e815f571",
+              "parentUUID": "da7bd398-8c7d-41e5-ab03-99a0cb99042a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Success Login",
+              "fullTitle": "Case 6 :  Değişkenlerini dışardan alan Login Success Login",
+              "timedOut": null,
+              "duration": 4025,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://zero.webappsecurity.com/login.html');\ncy.get('#user_login').type(eMail);\ncy.get('#user_password').type(pass);\ncy.get('.btn').click();\ncy.get('#logout_link').should('have.text', 'Logout');\ncy.url().should('include', 'account-summary.html');",
+              "err": {},
+              "uuid": "94dd0864-5250-4d18-b7f7-62536d32a1af",
+              "parentUUID": "da7bd398-8c7d-41e5-ab03-99a0cb99042a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "94dd0864-5250-4d18-b7f7-62536d32a1af"
+          ],
+          "failures": [],
+          "pending": [
+            "5600b7fb-7b8d-4d46-881b-9212e815f571"
+          ],
+          "skipped": [],
+          "duration": 4025,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

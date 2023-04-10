@@ -16,6 +16,6 @@ describe('Iframe', () => {
 
         cy.iframe().find('p').type('Cypress is working')
         // aşağıdaki kodda sayfa yeni sekmede açıldığı için işlem yapmam artık mümkün değildir.
-        cy.get('.large-4 > div > a').should('contain','Elemental Selenium').click()
+        //cy.get('.large-4 > div > a').should('contain','Elemental Selenium').click()
     });
 });

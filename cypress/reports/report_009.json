@@ -1,0 +1,127 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 1,
+    "failures": -1,
+    "start": "2023-04-10T10:20:24.410Z",
+    "end": "2023-04-10T10:20:31.933Z",
+    "duration": 7523,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c3c88895-d4a2-4197-9c34-d85528c93bf4",
+      "title": "",
+      "fullFile": "cypress\\e2e\\com.sancak\\day02\\day02_navigation.cy.js",
+      "file": "cypress\\e2e\\com.sancak\\day02\\day02_navigation.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "59e6e8a8-c574-4b1b-b534-aeee5998ddb9",
+          "title": "Case 4 : Navigation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Back, Forward, Refresh",
+              "fullTitle": "Case 4 : Navigation Back, Forward, Refresh",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.visit('https://qa-environment.koalaresorthotels.com/');\ncy.wait(4000); // 4000 mili saniye = 4 saniye\ncy.contains('Log in').click();\ncy.wait(3000);\ncy.go('back'); // cy.go(-1) komutu da aynı işlemi gerçekleştirir\ncy.wait(2000);\ncy.go('forward'); // cy.go(1) komutu da aynı işlemi gerçekleştirir\ncy.reload();",
+              "err": {},
+              "uuid": "95ed5ab4-e1e7-484b-8735-b027f9ae4d87",
+              "parentUUID": "59e6e8a8-c574-4b1b-b534-aeee5998ddb9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Zincirleme Navigasyon",
+              "fullTitle": "Case 4 : Navigation Zincirleme Navigasyon",
+              "timedOut": null,
+              "duration": 5112,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://qa-environment.koalaresorthotels.com/');\n// kod aynı satırın altında da yazılabilir. Bu yazıma Zincirleme Navigasyon denilmiştir\ncy.contains('Log in').click().go('back').go('forward');\ncy.reload(true).contains('Log in');",
+              "err": {},
+              "uuid": "d744b720-3f63-423f-af01-3d59022080f9",
+              "parentUUID": "59e6e8a8-c574-4b1b-b534-aeee5998ddb9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d744b720-3f63-423f-af01-3d59022080f9"
+          ],
+          "failures": [],
+          "pending": [
+            "95ed5ab4-e1e7-484b-8735-b027f9ae4d87"
+          ],
+          "skipped": [],
+          "duration": 5112,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
